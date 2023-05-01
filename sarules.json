@@ -1,0 +1,2713 @@
+{
+  "rules": [
+    {
+      "name": "ACT_NOW_CAPS",
+      "regex": "\\bA(?i:ct) N(?i:ow)\\b",
+      "flag": "i",
+      "score": 0.1,
+      "description": "Talks about 'acting now' with capitals"
+    },
+    {
+      "name": "BAD_CREDIT",
+      "regex": "\\b((?:bad|poor|eliminate|repair|(?:re)?establish|damag).{0,10} (?:credit|debt)|no credit (?:check|histor|need))",
+      "flag": "i",
+      "score": 0.1,
+      "description": "Eliminate Bad Credit"
+    },
+    {
+      "name": "BANG_GUAR",
+      "regex": "\\bguaranteed?\\!",
+      "flag": "i",
+      "score": 1,
+      "description": "Something is emphatically guaranteed"
+    },
+    {
+      "name": "BANG_OPRAH",
+      "regex": "\\boprah!",
+      "flag": "i",
+      "score": 0.001,
+      "description": "Talks about Oprah with an exclamation!"
+    },
+    {
+      "name": "BANKING_LAWS",
+      "regex": "banking laws",
+      "flag": "i",
+      "score": 2.399,
+      "description": "Talks about banking laws"
+    },
+    {
+      "name": "BILLION_DOLLARS",
+      "regex": "[BM]ILLION DOLLAR",
+      "flag": "i",
+      "score": 0.001,
+      "description": "Talks about lots of money"
+    },
+    {
+      "name": "BODY_ENHANCEMENT",
+      "regex": "\\b(?:enlarge|increase|grow|lengthen|larger\\b|bigger\\b|longer\\b|thicker\\b|\\binches\\b).{0,50}\\b(?:penis|male organ|pee[ -]?pee|dick|sc?hlong|wh?anger|breast(?!\\s+cancer))",
+      "flag": "i",
+      "score": 0.927,
+      "description": "Information on growing body parts"
+    },
+    {
+      "name": "BODY_ENHANCEMENT2",
+      "regex": "\\b(?:penis|male organ|pee[ -]?pee|dick|sc?hlong|wh?anger|breast(?!\\s+cancer)).{0,50}\\b(?:enlarge|increase|grow|lengthen|larger\\b|bigger\\b|longer\\b|thicker\\b|\\binches\\b|size)",
+      "flag": "i",
+      "score": 0.1,
+      "description": "Information on getting larger body parts"
+    },
+    {
+      "name": "CUM_SHOT",
+      "regex": "\\bcum[ -]?shots?\\b",
+      "flag": "i",
+      "score": 0.001,
+      "description": "Possible porn - Cum Shot"
+    },
+    {
+      "name": "CURR_PRICE",
+      "regex": "\\bCurrent Price:",
+      "flag": "i",
+      "score": 0.001,
+      "description": ""
+    },
+    {
+      "name": "DEAR_BENEFICIARY",
+      "regex": "\\b(?:De[ae]r\\s|At+(?:ention|n):?\\s?)(?:\\S+\\s)?Ben[ei]ficiary\\b",
+      "flag": "i",
+      "score": 2.351,
+      "description": "Dear Beneficiary:"
+    },
+    {
+      "name": "DEAR_SOMETHING",
+      "regex": "\\bDear (?:IT\\W|Internet|candidate|sirs?|madam|investor|travell?er|car shopper|web)\\b",
+      "flag": "i",
+      "score": 1.999,
+      "description": "Contains 'Dear (something)'"
+    },
+    {
+      "name": "DEAR_WINNER",
+      "regex": "\\bdear.{1,20}winner",
+      "flag": "i",
+      "score": 3.099,
+      "description": "Spam with generic salutation of \"dear winner\""
+    },
+    {
+      "name": "DIET_1",
+      "regex": "\\b(?:(?:without|no) (?:exercis(?:e(?! price)|ing)|dieting)|weight.?loss|(?:extra|lose|lost|losing).{0,10}(?:pounds|weight|inches|lbs)|burn.{1,10}fat)\\b",
+      "flag": "i",
+      "score": 0.714,
+      "description": "Lose Weight Spam"
+    },
+    {
+      "name": "DRUGS_SMEAR1",
+      "regex": "(?:Viagra|Valium|Xanax|Soma|Cialis){2}",
+      "flag": "i",
+      "score": 3.3,
+      "description": "Two or more drugs crammed together into one word"
+    },
+    {
+      "name": "DRUG_ED_CAPS",
+      "regex": "\\b(?:CIALIS|LEVITRA|VIAGRA)",
+      "flag": "i",
+      "score": 2.799,
+      "description": "Mentions an E.D. drug"
+    },
+    {
+      "name": "DRUG_ED_GENERIC",
+      "regex": "\\bGeneric Viagra\\b",
+      "flag": "i",
+      "score": 0.001,
+      "description": "Mentions Generic Viagra"
+    },
+    {
+      "name": "DRUG_ED_ONLINE",
+      "regex": "\\bviagra .{0,25}(?:express|online|overnight)",
+      "flag": "i",
+      "score": 0.696,
+      "description": "Fast Viagra Delivery"
+    },
+    {
+      "name": "DRUG_ED_SILD",
+      "regex": "\\bsildenafil\\b",
+      "flag": "i",
+      "score": 0.001,
+      "description": "Talks about an E.D. drug using its chemical name"
+    },
+    {
+      "name": "DX_TEXT_03",
+      "regex": "\\b[A-Z]{3} Media (?:Group|Relations)\\b",
+      "flag": "i",
+      "score": 1.699,
+      "description": "\"XXX Media Group\""
+    },
+    {
+      "name": "EMRCP",
+      "regex": "\\bExcess (?:Maximum )?Return Capital (?:Profits?|Funds?)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": "\"Excess Maximum Return Capital Profit\" scam"
+    },
+    {
+      "name": "EM_ROLEX",
+      "regex": "[^\\s\\w.]rolex",
+      "flag": "i",
+      "score": 0.595,
+      "description": "Message puts emphasis on the watch manufacturer"
+    },
+    {
+      "name": "EXCUSE_24",
+      "regex": "you(?:'ve|'re| have| are)? receiv(?:e|ed|ing) this (?:advertisement|offer|special|recurring|paid).{0,16}\\b(?:by either|because)",
+      "flag": "i",
+      "score": 1,
+      "description": "Claims you wanted this ad"
+    },
+    {
+      "name": "EXCUSE_4",
+      "regex": "To Be Removed,? Please",
+      "flag": "i",
+      "score": 2.399,
+      "description": "Claims you can be removed from the list"
+    },
+    {
+      "name": "EXCUSE_REMOVE",
+      "regex": "to be removed from.{0,20}(?:mailings|offers)",
+      "flag": "i",
+      "score": 2.907,
+      "description": "Talks about how to be removed from mailings"
+    },
+    {
+      "name": "FIN_FREE",
+      "regex": "\\bfinancial(?:ly)? (?:free|independen)",
+      "flag": "i",
+      "score": 0.1,
+      "description": "Freedom of a financial nature"
+    },
+    {
+      "name": "FORWARD_LOOKING",
+      "regex": "\\bcontains forward-looking statements\\b",
+      "flag": "i",
+      "score": 0.001,
+      "description": "Stock Disclaimer Statement"
+    },
+    {
+      "name": "FREE_PORN",
+      "regex": "\\bfree (?:porn|xxx|adult)",
+      "flag": "i",
+      "score": 0.001,
+      "description": "Possible porn - Free Porn"
+    },
+    {
+      "name": "FREE_QUOTE_INSTANT",
+      "regex": "free.{0,12}(?:(?:instant|express|online|no.?obligation).{0,4})+.{0,32}\\bquote",
+      "flag": "i",
+      "score": 2.7,
+      "description": "Free express or no-obligation quote"
+    },
+    {
+      "name": "GTUBE",
+      "regex": "XJS\\*C4JDBQADN1\\.NSBN3\\*2IDNEN\\*GTUBE-STANDARD-ANTI-UBE-TEST-EMAIL\\*C\\.34X",
+      "flag": "i",
+      "score": 1000,
+      "description": "Generic Test for Unsolicited Bulk Email"
+    },
+    {
+      "name": "GUARANTEED_100_PERCENT",
+      "regex": "100% GUARANTEED",
+      "flag": "i",
+      "score": 2.699,
+      "description": "One hundred percent guaranteed"
+    },
+    {
+      "name": "IMPOTENCE",
+      "regex": "\\b(?:impotence (?:problem|cure|solution)|Premature Ejaculation|erectile dysfunction)",
+      "flag": "i",
+      "score": 1.539,
+      "description": "Impotence cure"
+    },
+    {
+      "name": "INVESTMENT_ADVICE",
+      "regex": "\\binvestment advice",
+      "flag": "i",
+      "score": 0.1,
+      "description": "Message mentions investment advice"
+    },
+    {
+      "name": "JOIN_MILLIONS",
+      "regex": "\\bjoin (?:millions|thousands)\\b",
+      "flag": "i",
+      "score": 0.1,
+      "description": "Join Millions of Americans"
+    },
+    {
+      "name": "LIVE_PORN",
+      "regex": "\\blive .{0,9}(?:fuck(?:ing)?|sex|naked|girls?|virgins?|teens?|porno?)\\b",
+      "flag": "i",
+      "score": 0.001,
+      "description": "Possible porn - Live Porn"
+    },
+    {
+      "name": "LONG_TERM_PRICE",
+      "regex": "long\\W+term\\W+(target|projected)(\\W+price)?",
+      "flag": "i",
+      "score": 0.001,
+      "description": ""
+    },
+    {
+      "name": "LOOPHOLE_1",
+      "regex": "loop-?hole in the banking",
+      "flag": "i",
+      "score": 0.001,
+      "description": "A loop hole in the banking laws?"
+    },
+    {
+      "name": "LOW_PRICE",
+      "regex": "\\blow.{0,4} (?-i:P)rice",
+      "flag": "i",
+      "score": 0.1,
+      "description": "Lowest Price"
+    },
+    {
+      "name": "MALE_ENHANCE",
+      "regex": "male enhancement",
+      "flag": "i",
+      "score": 3.1,
+      "description": "Message talks about enhancing men"
+    },
+    {
+      "name": "MARKETING_PARTNERS",
+      "regex": "\\b(?:marketing|network) partner|\\bpartner (?:web)?site",
+      "flag": "i",
+      "score": 0.553,
+      "description": "Claims you registered with a partner"
+    },
+    {
+      "name": "MILLION_HUNDRED",
+      "regex": "Million\\s+\\S+\\s+Hundred",
+      "flag": "i",
+      "score": 0.001,
+      "description": "Million \"One to Nine\" Hundred"
+    },
+    {
+      "name": "MILLION_USD",
+      "regex": "Million\\b.{0,40}\\b(?:United States? Dollars?|USD)",
+      "flag": "i",
+      "score": 0.399,
+      "description": "Talks about millions of dollars"
+    },
+    {
+      "name": "MONEY_BACK",
+      "regex": "money back guarantee",
+      "flag": "i",
+      "score": 2.91,
+      "description": "Money back guarantee"
+    },
+    {
+      "name": "MORE_SEX",
+      "regex": "increased?.{0,9}(?:sex|stamina)",
+      "flag": "i",
+      "score": 2.799,
+      "description": "Talks about a bigger drive for sex"
+    },
+    {
+      "name": "NA_DOLLARS",
+      "regex": "\\b(?:\\d{1,3})?Million\\b.{0,40}\\b(?:Canadian Dollar?s?|US\\$|U\\.? ?S\\.? Dollar)",
+      "flag": "i",
+      "score": 0.779,
+      "description": "Talks about a million North American dollars"
+    },
+    {
+      "name": "NOT_ADVISOR",
+      "regex": "not a registered investment advisor",
+      "flag": "i",
+      "score": 0.001,
+      "description": "Not registered investment advisor"
+    },
+    {
+      "name": "NOT_SPAM",
+      "regex": "\\b(?:(?:this (?:e?-?mail|message)|we) (?:is not|are not|cannot be considered) Spam|ESTE CORREO NO PUEDE SER CONSIDERADO (?:INTRUSIVO|spam)|Diese Nachricht ist KEIN SPAM)",
+      "flag": "i",
+      "score": 1,
+      "description": "I'm not spam! Really! I'm not, I'm not, I'm not!"
+    },
+    {
+      "name": "NO_MEDICAL",
+      "regex": "\\bno medical exam",
+      "flag": "i",
+      "score": 2.199,
+      "description": "No Medical Exams"
+    },
+    {
+      "name": "NO_PRESCRIPTION",
+      "regex": "N[o0].{1,10}P(?:er|re)scr[i1]pt[i1][o0]n.{1,10}(?:n[e3][e3]d[e3]d|requ[1i]re|n[e3]c[e3]ssary)",
+      "flag": "i",
+      "score": 1.915,
+      "description": "No prescription needed"
+    },
+    {
+      "name": "ONE_TIME",
+      "regex": "\\bone\\W+time (?:charge|investment|offer|promotion)",
+      "flag": "i",
+      "score": 1.84,
+      "description": "One Time Rip Off"
+    },
+    {
+      "name": "ONLINE_PHARMACY",
+      "regex": "\\bonline pharmacy|\\b(?:drugs|medications) online",
+      "flag": "i",
+      "score": 0.843,
+      "description": "Online Pharmacy"
+    },
+    {
+      "name": "PREST_NON_ACCREDITED",
+      "regex": "prestigi?ous\\b.{0,20}\\bnon-accredited\\b.{0,20}\\buniversities",
+      "flag": "i",
+      "score": 0.001,
+      "description": "'Prestigious Non-Accredited Universities'"
+    },
+    {
+      "name": "PRICES_ARE_AFFORDABLE",
+      "regex": "\\baffordable .{0,10}prices\\b",
+      "flag": "i",
+      "score": 0.794,
+      "description": "Message says that prices aren't too expensive"
+    },
+    {
+      "name": "REFINANCE_NOW",
+      "regex": "time to refinance|refinanc\\w{1,3}\\b.{0,16}\\bnow\\b",
+      "flag": "i",
+      "score": 0.001,
+      "description": "Home refinancing"
+    },
+    {
+      "name": "REFINANCE_YOUR_HOME",
+      "regex": "\\brefinance your(?: current)? (?:home|house)\\b",
+      "flag": "i",
+      "score": 0.001,
+      "description": "Home refinancing"
+    },
+    {
+      "name": "REMOVE_BEFORE_LINK",
+      "regex": "(?:no thanks|not interested|unsubscribe here).{0,5}http://",
+      "flag": "i",
+      "score": 0.1,
+      "description": "Removal phrase right before a link"
+    },
+    {
+      "name": "REPLICA_WATCH",
+      "regex": "\\breplica.{1,20}rolex",
+      "flag": "i",
+      "score": 3.487,
+      "description": "Message talks about a replica watch"
+    },
+    {
+      "name": "SCC_CANSPAM_2",
+      "regex": "you may unsubscribe by clicking here or by writing to",
+      "flag": "i",
+      "score": 2.599,
+      "description": "Interesting compliance language"
+    },
+    {
+      "name": "SHORT_TERM_PRICE",
+      "regex": "short\\W+term\\W+(target|projected)(\\W+price)?",
+      "flag": "i",
+      "score": 0.001,
+      "description": ""
+    },
+    {
+      "name": "STOCK_ALERT",
+      "regex": "\\bstock alert",
+      "flag": "i",
+      "score": 0.001,
+      "description": "Offers a alert about a stock"
+    },
+    {
+      "name": "STRONG_BUY",
+      "regex": "strong buy",
+      "flag": "i",
+      "score": 0.001,
+      "description": "Tells you about a strong buy"
+    },
+    {
+      "name": "TVD_ACT_193",
+      "regex": "\\bact of (?:193|nineteen thirty)",
+      "flag": "i",
+      "score": 0.001,
+      "description": "Message refers to an act passed in the 1930s"
+    },
+    {
+      "name": "TVD_APPROVED",
+      "regex": "you.{1,2}re .{0,20}approved",
+      "flag": "i",
+      "score": 1,
+      "description": "Body states that the recipient has been approved"
+    },
+    {
+      "name": "TVD_INCREASE_SIZE",
+      "regex": "\\bsize of .{1,20}(?:penis|dick|manhood)",
+      "flag": "i",
+      "score": 1.529,
+      "description": "Advertising for penis enlargement"
+    },
+    {
+      "name": "TVD_LINK_SAVE",
+      "regex": "\\blink to save\\b",
+      "flag": "i",
+      "score": 0.001,
+      "description": "Spam with the text \"link to save\""
+    },
+    {
+      "name": "TVD_PH_REC",
+      "regex": "\\byour .{0,40}account .{0,40}record",
+      "flag": "i",
+      "score": 0.1,
+      "description": "Message includes a phrase commonly used in phishing mails"
+    },
+    {
+      "name": "TVD_PH_SEC",
+      "regex": "\\byour .{0,40}account .{0,40}security",
+      "flag": "i",
+      "score": 0.1,
+      "description": "Message includes a phrase commonly used in phishing mails"
+    },
+    {
+      "name": "TVD_QUAL_MEDS",
+      "regex": "\\bquality med(?:ication)?s\\b",
+      "flag": "i",
+      "score": 2.697,
+      "description": "The body matches phrases such as \"quality meds\" or \"quality medication\""
+    },
+    {
+      "name": "TVD_SECTION",
+      "regex": "\\bSection (?:27A|21B)",
+      "flag": "i",
+      "score": 0.001,
+      "description": "References to specific legal codes"
+    },
+    {
+      "name": "TVD_VISIT_PHARMA",
+      "regex": "Online Ph.rmacy",
+      "flag": "i",
+      "score": 1.957,
+      "description": "Body mentions online pharmacy"
+    },
+    {
+      "name": "UNCLAIMED_MONEY",
+      "regex": "\\bunclaimed\\s(?:assets?|accounts?|mon(?:ey|ies)|balance|funds?|prizes?|rewards?|payments?|deposits?)\\b",
+      "flag": "i",
+      "score": 2.699,
+      "description": "People just leave money laying around"
+    },
+    {
+      "name": "VIA_GAP_GRA",
+      "regex": "\\bvia.gra\\b",
+      "flag": "i",
+      "score": 0.001,
+      "description": "Attempts to disguise the word 'viagra'"
+    },
+    {
+      "name": "__ACCESS_RESTORE",
+      "regex": "\\bto (?:(?:restore|regain) access|(?:remove|uplift) (?:the|this) suspens|continue using your (?:account|online|mailbox)|zugreifen wiederhergestellt)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__ACCESS_REVOKE",
+      "regex": "(?:(?:temporary|permanent) (?:de-?activation|removal) of your (?:\\w{1,30} )?(?:access|account)|Ihre Kreditkarte wird gesperrt)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__ACCOUNT_ERROR",
+      "regex": "\\b(?:your account (?:is|appears to be) (?:incorrect|missing|in error|invalid))\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__ACCOUNT_SECURE",
+      "regex": "\\b(?:make your (?:\"?[^\\@\\s]+\\@\\S+\"? |e-?mail )?account more secure|Ihre Kreditkarte weist einige Sicherheitsprobleme)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__ACCOUNT_UPGRADE",
+      "regex": "\\b(?:upgrade (?:of )your (?:account|access)|your (?:access|account) is[\\w\\s]{0,40}being upgraded|Weiter zur Aktualisierung)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__ACH_CANCELLED_02",
+      "regex": "(?:rejected|cancel+ed|declined|your)[-_ ](?:(?-i:ACH)|direct[-_ ]deposit)[-_ ](?:payment|transfer|transaction|declin(?:ed|ing))",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__ACH_CANCELLED_03",
+      "regex": "\\bwire[-_ ]?(?:payment|transfer|transaction)[-_ ](?:(?:was|is)[-_ ])?(?:rejected|cancel+ed|declined|disabled|not[-_ ]accepted|(?:technical )?error)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__ACH_CANCELLED_04",
+      "regex": "\\bregarding[-_ ]your[-_ ]direct[-_ ]deposit[-_ ]via[-_ ](?-i:ACH)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__ADMAIL",
+      "regex": "(?:\\b|_)ad-?(?:mail|message)s?(?:\\b|_)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__ADMITS_SPAM",
+      "regex": "\\bth(?:e[- ]+above|is)(?:\\?+s|[- ]+is)[- ]+(?:intended[- ]+as[- ]+)?an?[- ]+(?:e-?mail[- ]+)?[a@]dvert[i1l]sement\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__ADULTDATINGCOMPANY_BODY",
+      "regex": "\\bAdultDatingCompany\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__AFF_LOTTERY",
+      "regex": "(?:lottery|winner)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__AFR_UNION",
+      "regex": "\\bafrican\\sunion\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__AGREED_RATIO",
+      "regex": "\\b(?:agreed|sharing)\\s(?:ratios?|percent\\w+)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__AM_DYING",
+      "regex": "\\b(?:am\\s(?:\\S+\\s)?dying|terminally\\sill|cancer|en\\sphase\\sterminale|(?:become|is|devenu|maladie)\\sincurable|que\\sje\\smeurs)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__AUTO_ACCIDENT",
+      "regex": "auto(?:mobile)? accident",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__BACK_SCRATCH",
+      "regex": "\\bmutual+y?\\s(?:benefi(?:t|cial)|interest)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__BANK_DRAFT",
+      "regex": "\\bbank\\sdraft",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__BARRISTER",
+      "regex": "\\b(?:barrister|solicitor at law|barr\\.)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__BENIN",
+      "regex": "\\bb(?:e|=E9|[\\xe9]|[\\xc3][\\xa9])nin\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__BONUS_LAST_DAY",
+      "regex": "\\b(?:last|final) day of the (?:\\$\\d+ |\\d+ dollars? )?bonus offer(?:ing)?\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__BOUNCE_NEVER_SEE",
+      "regex": "\\bThis is an autoresponder. I'll never see your message\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__BOUNCE_NONWORKING",
+      "regex": "\\bYou have reached a non.?working address.  Please check\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__BOUNCE_NO_RESEND",
+      "regex": "\\bPlease do not resend your original message\\.",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__BOUNCE_OOO_B1",
+      "regex": "\\bI ?.m away until .{10,20} and am unable to read your message\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__BOUNCE_OOO_B2",
+      "regex": "\\bI am currently out of the office\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__BOUNCE_OOO_CB1",
+      "regex": "\\bout of (?:the )?office\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__BOUNCE_OOO_CB2",
+      "regex": "\\bon (?:vacation|holiday)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__BOUNCE_OOO_CB3",
+      "regex": "\\bolen lomalla\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__BOUNCE_OOO_CB4",
+      "regex": "\\breturn to (?:the )?office\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__BTC_OBFU_5",
+      "regex": "&[hash]x62;&[hash]x69;&[hash]x74;&[hash]x63;&[hash]x6F;&[hash]x69;&[hash]x6E;",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__BURKINA_FASO",
+      "regex": "\\bburkina\\s?faso\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__CAN_HELP",
+      "regex": "\\bcan help\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__CASHPRZ",
+      "regex": "cash prize of",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__CHARITY",
+      "regex": "\\b(?:charit(?:y|[ai]ble)|orphans?|homeless|orphelins|sans\\sabri)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__CLEAN_MAILBOX",
+      "regex": "\\b(?:(?:e-?mail|mail\\s?box|violation:|(?-i:CLICK)) (?:quota size|clean(?:-?up))|clean ?up click ?here|(?:please|automatically) reduce (?:your|the) e?-?mail ?box size|reduce (?:your |the )?(?:e?-?mail(?: ?box)? )?size automatically)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__COMPENSATION",
+      "regex": "\\b(?:compensat(?:e|ion)|recompensed?|ausgleich)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__CONTACT_ATTY",
+      "regex": "\\bcontact(?:er)?\\s(?:my|(?:de\\s)?mon)\\s(?:barrister|attou?rney|lawyer|avocat|gestionnaire)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__CONTACT_YOU",
+      "regex": "\\b(?:contact(?:ing)\\syou|vous\\scontacter?)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__COPY_PASTE_DE",
+      "regex": "Kopieren Sie es und f(?:\\xfc|\\xc3\\xbc)gen Sie es ein|Kopieren \\& Einf(?:\\xfc|\\xc3\\xbc)gen",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__COPY_PASTE_ES",
+      "regex": "copiarlo y pegarlo",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__COPY_PASTE_FR",
+      "regex": "le copier (et le|\\+) coller",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__COPY_PASTE_IT",
+      "regex": "copia(r?)lo (e|\\&) incolla(r?)lo",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__COPY_PASTE_NL",
+      "regex": "kopieer en plak het",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__COPY_PASTE_SE",
+      "regex": "kopiera den och klistra in",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__COURIER",
+      "regex": "\\bcourier\\s(?:company|service)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DAY_I_EARNED",
+      "regex": "day,?\\sI\\s(?:earned|got|received|made|brought\\sin)\\s\\$\\s?\\d{3}",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DBLCLAIM",
+      "regex": "avoid double claiming",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DEAL",
+      "regex": "\\b(?:(?:business|financial|this|the|mutual|die(?:se)?r?|cette|profitable)\\s(?:deal|transa[ck]tion|proposal|off[er]{2}|venture|suggestion|partnership)|your\\spartnership)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DECEASED",
+      "regex": "\\b(?:the|my|your|der|du|le|meu?)\\s(?:deceased|late|verstorbenen|d(?:i|e|=E9|[\\xe9]|[\\xc3][\\xa9])funto?|d(?:e|=E9|[\\xe9]|[\\xc3][\\xa9])nt|falecido)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DESTROY_ME",
+      "regex": "\\b(?:destroy|hunt|quemar)\\sm[eyi]\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DESTROY_YOU",
+      "regex": "\\b(?:destroy\\syou|deine Zukunft zerst\\S{1,3}ren)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DIED_IN",
+      "regex": "\\bdied\\sin\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DIPLOMATIC",
+      "regex": "\\bdiplomatic\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DLND_ATTACH",
+      "regex": "\\bdownload\\sthe\\sattach(?:ed|ment)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DORMANT_ACCT",
+      "regex": "\\b(?:(?:dormant|abandoned|left\\s?over)\\s(?:account|fund|transaction|sum|deposit)|fonds\\sdorment)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DOS_BODY_FRI",
+      "regex": "\\bfri(?:day)?\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DOS_BODY_MON",
+      "regex": "\\bmon(?:day)?\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DOS_BODY_SAT",
+      "regex": "\\bsat(?:day)?\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DOS_BODY_STOCK",
+      "regex": "\\bstock\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DOS_BODY_SUN",
+      "regex": "\\bsun(?:day)?\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DOS_BODY_THU",
+      "regex": "\\bthu(?:r(?:s(?:day)?)?)?\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DOS_BODY_TICKER",
+      "regex": "\\b[A-Z]{4}\\.(?:OB|PK)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DOS_BODY_TUE",
+      "regex": "\\btue(?:s(?:day)?)?\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DOS_BODY_WED",
+      "regex": "\\bwed(?:nesday)?\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DOS_CORRESPOND_EMAIL",
+      "regex": "correspond with me using my email",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DOS_DROP_ME_A_LINE",
+      "regex": "Drop me a line at",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DOS_EMAIL_DIRECTLY",
+      "regex": "(?:Email m[a-z]?e|address) direc(?:tl|lt)y at",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DOS_FIN_ADVANTAGE",
+      "regex": "\\bfinancial advantage",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DOS_I_AM_25",
+      "regex": "I a.?m 25",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DOS_I_DRIVE_A",
+      "regex": "I drive a",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DOS_LET_GO_JOB",
+      "regex": "I was (?:let go|fired|layed off|dismissed) from a job I h(?:el|a)d for (?:2\\d years|\\d{3} months)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DOS_LINK",
+      "regex": "\\blink\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DOS_MEET_EACH_OTHER",
+      "regex": "(?:meet each other|[Mm]ay ?be we can meet)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DOS_MY_OLD_JOB",
+      "regex": "my old job",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DOS_PERSONAL_EMAIL",
+      "regex": "personal email at",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DOS_STEADY_COURSE",
+      "regex": "\\bsteady (?:and increasing )?course\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DOS_STRONG_CF",
+      "regex": "\\bstrong cash flow",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DOS_TAKING_HOME",
+      "regex": "Taking home \\d (?:digit level|figures) in \\d{1,2} months",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DOS_WRITE_ME_AT",
+      "regex": "[Ww].?r.?i.?t.?e me at",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DRUGS_ANXIETY2",
+      "regex": "\\bAlprazolam\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DRUGS_ANXIETY8",
+      "regex": "\\bklonopin\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DRUGS_ANXIETY9",
+      "regex": "\\brivotril\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DRUGS_ANXIETY_VAL",
+      "regex": "valium",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DRUGS_ANXIETY_XAN",
+      "regex": "xan[ae]x",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DRUGS_DIET3",
+      "regex": "\\bbontril\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DRUGS_DIET4",
+      "regex": "\\bphendimetrazine\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DRUGS_DIET5",
+      "regex": "\\bdiethylpropion\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DRUGS_DIET_PHEN",
+      "regex": "\\bphentermine\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DRUGS_ERECTILE2",
+      "regex": "\\bV(?:agira|igara|iaggra|iaegra)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DRUGS_ERECTILE4",
+      "regex": "\\bC(?:alis|ilias|ilais)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DRUGS_ERECTILE5",
+      "regex": "\\b_{0,3}s[_\\W]?[i1!|l\\xEC-\\xEF][_\\W]?l[_\\W]?d[_\\W]?[e3\\xE8-\\xEB][_\\W]?n[_\\W]?[a4\\xE0-\\xE6@][_\\W]?f[_\\W]?[i1!|l\\xEC-\\xEF][_\\W]?l c[_\\W]?[i1!|l\\xEC-\\xEF][_\\W]?t[_\\W]?r[_\\W]?[a4\\xE0-\\xE6@][_\\W]?t[_\\W]?[e3\\xE8-\\xEB]_{0,3}(?:\\b|\\s)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DRUGS_ERECTILE_C",
+      "regex": "\\bCialis(?!\\xc3\\xa9|\\xe9)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DRUGS_ERECTILE_L",
+      "regex": "\\bLevitra\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DRUGS_ERECTILE_V",
+      "regex": "\\bViagra\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DRUGS_MUSCLE2",
+      "regex": "\\b_{0,3}cycl[o0\\xF2-\\xF6]b[e3\\xE8-\\xEB]nz[a4\\xE0-\\xE6@]pr[i1!|l\\xEC-\\xEF]n[e3\\xE8-\\xEB]_{0,3}(?:\\b|\\s)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DRUGS_MUSCLE5",
+      "regex": "\\bskelaxin\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DRUGS_PAIN11",
+      "regex": "\\bzebutal\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DRUGS_PAIN12",
+      "regex": "\\besgic plus\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DRUGS_PAIN2",
+      "regex": "\\b_{0,3}c[o0\\xF2-\\xF6]deine_{0,3}\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DRUGS_PAIN_FIO",
+      "regex": "fioricet",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DRUGS_PAIN_VICO",
+      "regex": "vicodin",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__DRUGS_PAIN_VIOXX",
+      "regex": "vioxx",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__EARLY_DEMISE",
+      "regex": "\\buntimely\\sdeath\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FAILED_LOGINS",
+      "regex": "unsuc+es+ful log-?[io]n at+empts",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FB_COST",
+      "regex": "\\bcost\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FB_S_STOCK",
+      "regex": "\\bstock",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FB_TOUR",
+      "regex": "\\btour",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FEES",
+      "regex": "\\b(?:security|safe\\w*|courier|registration|pay|paid|up-?front|processing|delivery|transfer|keeping)[\\s\\w]{0,15}\\s(?:fee|charge)s?\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FOR_SALE_LTP",
+      "regex": "00\\.? (?:less 10%|LTP)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FOR_SALE_NET",
+      "regex": "00\\.? NET",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FOR_SALE_OBO",
+      "regex": "\\bor best offer\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FOR_SALE_PRC_100K",
+      "regex": "\\bprice:? \\$\\d\\d\\d,\\d\\d\\d",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FOR_SALE_PRC_10K",
+      "regex": "\\bprice:? \\$\\d\\d,\\d\\d\\d",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FOR_SALE_PRC_1K",
+      "regex": "\\bprice:? \\$\\d,?\\d\\d\\d[.\\s]",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FOUND_YOU",
+      "regex": "\\b(?:I|we)\\sfound\\syour?\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD",
+      "regex": "\\b(?:de)?fraud",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_AON",
+      "regex": "\\b(?:confidential|private|alternate|alternative) (?:(?:e-? *)?mail)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_AUM",
+      "regex": "\\bthe desk of\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_AXF",
+      "regex": "magnanimity",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_BEP",
+      "regex": "\\b(?:bank of nigeria|central bank of|trust bank|apex bank|amalgamated bank)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_BGP",
+      "regex": "\\battached to ticket number\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_CKF",
+      "regex": "computer ballot system",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_DPR",
+      "regex": "\\b(?:(?:respond|reply) (?:urgently|immediately)|(?:urgent|immediate|earliest) (?:reply|response))\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_ETX",
+      "regex": "\\byour\\b[^.]{0,99}\\b(?:contact (?:details|information)|private (?:e?[- ]?mail|telephone|tel|phone|fax))\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_EZY",
+      "regex": "\\b(?:of|the) late president\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_FBI",
+      "regex": "\\bdisburs",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_FCW",
+      "regex": "fiduciary agent",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_FVU",
+      "regex": "award notification",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_GBW",
+      "regex": "god gives .{1,10}second chance",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_IOU",
+      "regex": "\\b(?:no risks?|risk-? *free|free of risks?|100% safe)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_IOV",
+      "regex": "\\b(?:no risks?|risky?[- ]{0,3}free|free of risks?|100% safe|v\\S{1,3}llig Risikofrei ist)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_IPK",
+      "regex": "\\b(?:in|to|visit) your country\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_IRJ",
+      "regex": "(?:finance|holding|securit(?:ies|y)) (?:company|firm|storage house)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_IRT",
+      "regex": "\\b(?:compliments? of the|dear friend|dear sir|yours faithfully|season'?s greetings)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_JBU",
+      "regex": "\\bforeign account\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_JNB",
+      "regex": "\\boperat(?:e|ing)\\b[^.]{0,99}\\b(?:for(?:ei|ie)gn|off-? ?shore|over-? ?seas?) (?:bank )?accounts?\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_JYG",
+      "regex": "\\bgive\\s+you .{0,15}(?:fund|money|total|sum|contact|percent)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_KJV",
+      "regex": "(?:claim|concerning) (?:the|this) money",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_LTX",
+      "regex": "\\bmilli?on (?:.{1,25} thousand\\s*)?(?:(?:united states|u\\.?s\\.?) dollars|(?i:U\\.?S\\.?D?))\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_MCQ",
+      "regex": "\\btransaction\\b.{1,30}\\b(?:magnitude|diplomatic|strict|absolute|secret|confiden(?:tial|ce)|guarantee)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_MLY",
+      "regex": "\\b(?:reply|respond)\\b[^.]{0,50}\\b(?:to|through)\\b[^.]{0,50}\\@\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_MQO",
+      "regex": "foreign (?:business partner|customer)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_NEB",
+      "regex": "(?:government|bank) of nigeria",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_NRG",
+      "regex": "i am contacting you",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_PTS",
+      "regex": "\\b(?:ass?ass?inat(?:ed|ion)|murder(?:e?d)?|kill(?:ed|ing)\\b[^.]{0,99}\\b(?:war veterans|rebels?))\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_PTX",
+      "regex": "\\b(?:ass?ass?inat(?:ed|ion)|murder(?:e?d)?|poison(?:e?d)?|kill(?:ed|ing|ers)\\b[^.]{0,99}\\b(?:war veterans|rebels?)|les tueurs)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_PVN",
+      "regex": "as the beneficiary",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_QFY",
+      "regex": "\\bover-? *(?:invoiced?|cost(?:s|ing)?)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_QXX",
+      "regex": "\\b(?:my name is|i am) (?:mrs?|engr|barrister|dr|prince(?:ss)?)[. ]",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_RLX",
+      "regex": "lott(?:o|ery) (?:co,?ordinator|international)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_SNT",
+      "regex": "\\blocate(?: .{1,20})? extended relative",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_TCC",
+      "regex": "foreign (?:offshore )?(?:bank|account)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_TDP",
+      "regex": "\\b(?:business partner(?:s|ship)?|silent partner(?:s|ship)?)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_THJ",
+      "regex": "modalit(?:y|ies)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_ULK",
+      "regex": "\\baffidavits?\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_UOQ",
+      "regex": "vital documents",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_UUY",
+      "regex": "\\blegitimate business(?:es)?\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_WDR",
+      "regex": "\\bprivate lawyer\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_WFC",
+      "regex": "\\bsecur(?:e|ing) (?:the )?(?:funds?|monies)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_WNY",
+      "regex": "\\b(?:disburse?(?:ment)?|incurr?(?:ed)?|remunerr?at(?:ed?|ion)|remm?itt?(?:ed|ance|ing)?)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_XJR",
+      "regex": "(?:who was a|as a|an? honest|you being a|to any) foreigner",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_XVW",
+      "regex": "\\bhonest cooperation\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_XWW",
+      "regex": "\\b(?:honest(?:ly)?\\sco(?:-?operat(?:e|ion)|llaborat(?:e|ion))|ehrliche\\szusammenarbeit|sichere [kc]o+p[eo]ration|col+aboration\\swith\\sme)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_YJA",
+      "regex": "over-invoice",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_YPO",
+      "regex": "the total sum",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_YQV",
+      "regex": "nigerian? (?:national|government)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_YWW",
+      "regex": "\\bfurnish you with\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__FRAUD_ZFJ",
+      "regex": "\\b(?:wife|son|brother|daughter) of the late\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__GAPPY_SALES_LEADS",
+      "regex": "\\b(?:business|e?-?mail|your|marketing|advertising)\\s(?!sales|leads|campaign)(?:s\\s?a\\s?l\\s?e\\s?s|l\\s?e\\s?a\\s?d\\s?s|c\\s?a\\s?m\\s?p\\s?a\\s?i\\s?g\\s?n)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__GHANA",
+      "regex": "\\bghana\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__HAS_WON_01",
+      "regex": "\\bque ha ganado\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__HK_LOTTO_2",
+      "regex": "\\blot(?:eri[ej]|t(?:ery|o)) ?(?:(?:inter)?national|foundation|mercato|univers|euro ?million|e-?mail|euro-pw|bill ?gates|swiss|prestige|cristal|am.ricaine|coca.?cola|fiduciary|department)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__HK_LOTTO_BALLOT",
+      "regex": "\\b(?:promotional|on.?line|computer|internet|e-?mail|fran.aise) (?:ballot|draw|sweepstake)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__HK_LOTTO_STAATS",
+      "regex": "\\bstaatsloteri",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__HK_SCAM_N15",
+      "regex": "\\b(?:account (?:overseas?|offshore)|(?:overseas?|offshore) account)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__HK_SCAM_N16",
+      "regex": "\\b(?:arrangement secret|secret arrangement)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__HK_SCAM_N2",
+      "regex": "\\bnext of kin\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__HK_SCAM_N3",
+      "regex": "\\bdirect telephone numbers?\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__HK_SCAM_N8",
+      "regex": "\\byour compensation\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__HK_SCAM_S1",
+      "regex": "pay you the sum of",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__HK_SCAM_S15",
+      "regex": "(?:discovered a dormant account|can you be my partner)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__HK_SCAM_S25",
+      "regex": "\\bbank (?:in|of) ghana",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__HUSH_HUSH",
+      "regex": "\\b(?:confiden[tc]i[ae]l(?:\\b|ity\\b|it(?:=E9|[\\xe9]|[\\xc3][\\xa9]))|private\\b|secr[e\\xe8](?:te?|cy)\\b|sensitive\\b|concealed\\b|obscured?\\b|discre(?:et|tion)\\b|very\\sdiscrete|top\\ssecret|vertraulich(?:en)?\\b|geheim\\b|priv(?:e|=E9|[\\xe9]|[\\xc3][\\xa9]))",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__INHERIT_PMT",
+      "regex": "\\binheritance\\spayment\\s",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__INTL_BANK",
+      "regex": "\\b(?:international\\s(?:\\w+\\s)?bank|banque\\sinternationale)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__INVEST_COUNTRY",
+      "regex": "\\binvest\\sin\\syour?\\scountry\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__INVEST_MONEY",
+      "regex": "\\binvest(?:ir)?\\s(?:this|ces|d[ae]s|sur ce|de ces)\\s(?:money|f[ou]nds?)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__ISO_2022_JP_DELIM",
+      "regex": "\\e\\$B",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__IVORY_COAST",
+      "regex": "\\b(?:Cote\\s?D.Ivoire|Ivory\\s?Coast|Costa\\sde\\sMarfil)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__I_INHERIT",
+      "regex": "\\b(?:I|eu)\\s[a-z\\s]{0,30}(?:inherited|herdei)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__I_WILL_YOU",
+      "regex": "\\bwill(?:ed)?\\s(?:[a-z\\s]{0,20}(?:fortune|money|\\$[\\d,]+[a-z]{0,9})\\s)?to\\syou\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__JAPANESE_UCE_BODY",
+      "regex": "(?:L\\$>5Bz|EE;R%a!<%k)(?:8x|9-)9p",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__KAM_LOTTO2",
+      "regex": "(?is)((ticket|serial|lucky) number|secret pin ?code|batch number|reference number|promotion date)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__LARGE_PERCENT_AFTER",
+      "regex": "\\d{3}% after",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__LOTSA_MONEY_05",
+      "regex": "(?:(?:sum|value|amount)\\sof\\s)<NUM_NOT_DATE_IP>[\\d.,\\sO]{7,20}[\\dO\\.][\\)\\]\\(\\s]{0,3}(?:pounds?|dollars?|euros?|bucks)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__LOTTO_ADMITS_2",
+      "regex": "\\b(?:free)?(?:lot(?:to|tery|erie)|sweepstakes)\\s(?:(?:inter)?na[tz]ional|department|bureau|group|award|microsoft)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__LOTTO_AGENT_02",
+      "regex": "\\blot+ery[^\\.]{1,40} ticket agent",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__LOTTO_DEPT",
+      "regex": "\\b(?:claim(?:s|ing)?(?:\\sprocessing)?|fiducia\\w+|reimbursement|(?:international|foreign|win+ing)(?:\\s(?:rem+it+ance|settlement|payment|award))+|payment|award|compensation|lot+ery)(?:\\s\\w+)?\\s?(?:department|dept|unit|group|committee|bureau)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__LOTTO_VERIFY",
+      "regex": "\\bpromo\\sverification",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__LOTTO_WIN_01",
+      "regex": "\\bwin+ing\\s(?:prize|number|notification|draw|check|cheque|details|information|payment)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__LUCKY_WINNER",
+      "regex": "\\b(?:lucky|gl.cklich(?:en)?|afortunados)\\s(?:(?:ge)?win+ers?|ganador(?:es)?|individuals?)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__LUCRATIVE",
+      "regex": "\\b(?:lucrative|profitable|tr[\\xe8]s\\ssalutaire)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__MAILBOX_FULL_SE",
+      "regex": "(?:\\b=F6|[\\xf6]|[\\xc3][\\xb6])verskridit gr(?:=E4|[\\xe4]|[\\xc3][\\xa4])nsen f(?:=F6|[\\xf6]|[\\xc3][\\xb6])r din postl(?:=E5|[\\xe5]|[\\xc3][\\xa5])da\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__MAIL_ACCT_ACCESS1",
+      "regex": "\\b(?:your (?:web ?|e-?)?mail (?:account|log-?in) (?:has )?been accessed|r(?:=F3|[\\xf3])zne komputery zalogowaniu sie)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__MAIL_ACCT_ACCESS2",
+      "regex": "\\blo+se ac+es+ to your (?:web|e-?)?mail ?(?:account|log-?in|box|address)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__MAKE_XTRA_DOLLAR",
+      "regex": "\\bmake an extra dollar\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__MILLIONS",
+      "regex": "\\bmillions\\sof\\s(?:dollar|euro|pound)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__MONERO_CURNCY",
+      "regex": "Monero \\(XMR\\)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__MY_FORTUNE",
+      "regex": "\\b(?:my|his|her)\\s(?:fortune|heritage)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__NEVER_HEAR_EN",
+      "regex": "(never hear me again|destroy all your secrets|not bother you again|leave you alone)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__NEVER_HEAR_IT",
+      "regex": "eliminare tutti i tuoi segreti|Ti garantisco che non ti disturbe",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__NEXT_OF_KIN",
+      "regex": "\\bnext[-\\s]of[-\\s]kin\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__NIGERIA",
+      "regex": "\\bnigeria\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__NOT_DEAD_YET",
+      "regex": "\\b(?:will\\sinherit|que\\sherede|your\\sdeath|your?\\sbeing\\sdead)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__NOT_SCAM",
+      "regex": "\\b(?:not\\sa\\sscam|(?:not|never)\\sscam\\syou)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__OBFU_UNSUB_UL",
+      "regex": "(?:click_here|remove_your|our_e?mail|this_list|to_unsubscribe|future_e?mail|our_list)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__OUR_BEHALF",
+      "regex": "\\b(?:on\\s(?:my|our)\\sbehalf|of\\sbehalf\\sof)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__PASSIVE_INCOME",
+      "regex": "\\bpassive income\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__PASSWORD_EXP_CLUMSY",
+      "regex": "\\bpassword is due for expiration yesterday\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__PASSWORD_UPGRADE",
+      "regex": "\\bpassword upgrade\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__PAY_YOU",
+      "regex": "\\bpay\\syou\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__PDS_EXPIRATION_NOTICE",
+      "regex": "\\bexpiration (notice|alert|date)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__PDS_OFFER_ONLY_AMERICA",
+      "regex": "This offer (?:is )?(?:only )?for (United States|USA)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__PDS_SENT_TO_EMAIL_ADDR",
+      "regex": "This message was sent to Email Address\\.",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__PDS_SEO2",
+      "regex": "losing your (?:[a-z]+ )?(?:rank(?:ing)?|results)|rank well on [a-z]+\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__PERFECT_BINARY",
+      "regex": "\\bperfect binary option\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__PILL_PRICE_01",
+      "regex": "(?=[\\d .f])(?:free|[\\d .]{3}(?:/|per|each)) ?(?=[ptc])(?:pill|tablet|cap(?:sule|let))s?\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__PILL_PRICE_02",
+      "regex": "(?=[ptc])(?:pill|tablet|cap(?:sule|let))s[-= :]{1,5}\\$?[\\d .]{3}",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__PLS_REVIEW",
+      "regex": "\\b(?:please|kindly)\\s(?:(?:re)?view|see)(?:\\s\\w+)?\\sattach(?:ed|ment)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__PUMPDUMP_01",
+      "regex": "\\b(?:times|multiply|tripl(?:e|ing)|quadrupl(?:e|ing)|quintupl(?:e|ing)) (?:your|an) (?:princip(?:al|le)|investment)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__PUMPDUMP_03",
+      "regex": "\\bbuy (?:[^.!]{1,30} )?(?:(?:(?:mon|tues|wednes|thurs|fri)day|tomorrow) (?:first thing|open|morning)|(?:first thing|opens|before) (?:(?:mon|tues|wednes|thurs|fri)day|tomorrow))",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__PUMPDUMP_04",
+      "regex": "\\bmake you (?:big bucks|hundreds|thousands)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__PUMPDUMP_06",
+      "regex": "\\brecommend(?:ed|s)? (?:a|this) (?:company|stock)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__PUMPDUMP_07",
+      "regex": "\\b(?:buy|grab it) for (?:around |about |less than )?\\d+ cents\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__PUMPDUMP_09",
+      "regex": "\\b(?:buy|get|snap up|grab) as many shares (?:of it )?as (?:you|I) can\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__PUMPDUMP_10",
+      "regex": "\\btrading at (?:such )?a (?:bargain|cheap|low)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__RANDOM_PICK",
+      "regex": "\\b(?:random(?:ly)?\\s(?:\\w+\\s)?(?:select(?:ion|ed)|pick(?:ed)?|computer)|(?:select|pick)ed\\s(?:at\\s)?random(?:ly)?|(?:esco(?:g|lh)idos|seleccion) (?:aleatoria(?:mente)?|al azar))\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__RECEIVE_BONUS",
+      "regex": "\\byou(?:'ll)?(?: also| will)* (?:rec[ei]*ve|get|earn|collect|be (?:awarded|handed|remitted|given|paid|(?:greeted|welcomed|started) with)) (?:an? )?(?:gift|bonus|extra)(?: of|:)? \\$[\\d,]+",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__RELEASE_MESSAGES",
+      "regex": "\\b(?:release messages|(?:retrieve|release|download) your(?: undelivered|unreceived|held|pending)? e?-?mails|(?:e?-?mails|messages).{1,20}download them now)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__RUDE_HTML_1",
+      "regex": "Get a capable html e-mailer",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__RUDE_HTML_2",
+      "regex": "not support the display of HTML. Please view this message in a different",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__RUDE_HTML_3",
+      "regex": "This message contains an HTML formatted message but your email client does",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__RUDE_HTML_4",
+      "regex": "Your mailer do not support HTML messages. Switch to a better mailer",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__SCAM",
+      "regex": "\\bscam(?:m?e[dr])?s?\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__SECURITY_DEPT",
+      "regex": "\\bsecurity dep(?:artmen)?t\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__STAY_HOME",
+      "regex": "\\b(?:going out of|leaving)(?: your)? (?:home|house|residence)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__STOCK_TIP",
+      "regex": "\\bsto[ck]{2}\\s?tip\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__SUBSCRIPTION_INFO",
+      "regex": "\\b(?:e?newsletters?|(?:un)?(?:subscribe|register)|you(?:r| are) subscri(?:be|ption)|opt(?:.|ing)?out\\b|further info|you do ?n[o']t w(?:ish|ant)|remov\\w{1,3}.{1,9}\\blists?\\b|to your white.?list)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__SUM_OF_FUND",
+      "regex": "\\b(?:sum|release|freigabe)\\s(?:of|der)\\s(?:amount|fund|investment|mittel)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__SURVEY",
+      "regex": "\\bsurvey\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__SUSPICION_LOGIN",
+      "regex": "\\bsuspicion login\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__SYSADMIN",
+      "regex": "\\b(?:help?[- ]?desk|(?:(?:web ?)?mail ?|sys(?:tem )?)admin(?:istrator)|local[- ]host|(?:support|upgrade|management|security|admin(?:istrat(?:or|ion))?) (?:team|center)|message from administrator|university mail server copyright|suporte t(?:=E9|[\\xe9]|[\\xc3][\\xa9])cnico|administrador do sistema)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__THEY_INHERIT",
+      "regex": "\\b(?:inherit\\sth(?:e|is)\\smoney|herede\\sest[ea]\\sdinero)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__THIS_AD",
+      "regex": "(?:\\b|_)this[- _]+(?:ad(?:vert[i1l]sement)?|promo(?:tion)?)s?(?:\\b|_)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__TO_YOUR_ORG",
+      "regex": "\\b(?:to|for) your organi[sz]ation\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__TRANSFORM_LIFE",
+      "regex": "\\b(transform|change) your (?:daily )?life(?:style)?\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__TRAVEL_AGENT",
+      "regex": "\\btravel\\sagen(?:t|cy)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__TRAVEL_BUSINESS",
+      "regex": "\\bbusiness\\stravel\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__TRAVEL_ITINERARY",
+      "regex": "(?:travel|ticketed|your|current) itinerary",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__TRAVEL_PROFILE",
+      "regex": "\\btravel+er\\sprofile\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__TRAVEL_RESERV",
+      "regex": "\\b(?:reservation\\s(?:confirmed|number)|travel\\sreservations?)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__TRTMT_DEFILED",
+      "regex": "\\bdefiled\\sall\\s(?:forms\\sof\\s)?(?:medical\\s)?treatments?\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__TRUNK_BOX",
+      "regex": "\\b(?:(?:trunk|metallic|proof|security|consignment)\\sbox(?:es)?|sealed\\ssafe|une mallette m(?:e|=E9|[\\xe9]|[\\xc3][\\xa9])tallique)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__TRUSTED_CHECK",
+      "regex": "\\b(?:cashier'?s?|certified)\\sche(?:ck|que)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__TVD_PH_BODY_01",
+      "regex": "\\baccount .{0,20}placed? [io]n restricted status",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__TVD_PH_BODY_02",
+      "regex": "\\brecords (?:[a-z_,-]+ )+?(?:feature|(?:a|re)ward)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__TVD_PH_BODY_03",
+      "regex": "\\byou(?:'ve| have) been (?:[a-z_,-]+ )+?payment",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__TVD_PH_BODY_04",
+      "regex": "\\bfunds? (?!transfer from)(?!from)(?!in)(?!via)(?:[a-z_,-]+ )+?to your (?:[a-z_,-]+ )*?account",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__TVD_PH_BODY_05",
+      "regex": "\\bthis is (?:[a-z_,-]+ )+?protect (?:[a-z_,-]+ )+?your",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__TVD_PH_BODY_06",
+      "regex": "Dear [a-z]+ bank (?:member|customer)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__TVD_PH_BODY_07",
+      "regex": "\\bguarantee the safety of your (?:[a-z_,-]+ )*?account",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__TVD_PH_BODY_08",
+      "regex": "\\bmultiple password failures",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__TVD_PH_BODY_ACCOUNTS_POST",
+      "regex": "\\b(?:(?:[dr]e-?)?activat[a-z]*|(?:re-?)?validate|secure|restore|confirm|update|suspend) (?!your)(?:[a-z_,-]+ )+?accounts?\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__TVD_PH_BODY_ACCOUNTS_PRE",
+      "regex": "\\baccounts? (?:[a-z_,-]+ )+?(?:record[a-z]*|suspen[a-z]+|notif(?:y|ication)|updated|verifications?|credited)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__UN",
+      "regex": "\\bunited\\snations?\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__UNSUB_GOOG_FORM",
+      "regex": "Unsub?sc?ribe\\s<?https?://docs\\.google\\.com/forms/",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__URG_BIZ",
+      "regex": "urgent.{0,16}(?:assistance|business|buy|confidential|notice|proposal|reply|request|response)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__VALIDATE_MBOX_SE",
+      "regex": "(?:\\b=E5|[\\xe5]|[\\xc3][\\xa5])terst(?:=E4|\\xe4|[\\xc3][\\xa4])lla ditt konto\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__VBOUNCE_AMAVISD2",
+      "regex": "\\bV I R U S\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__VBOUNCE_AOL",
+      "regex": "TRANSACTION FAILED - Unrepairable Virus Detected. ",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__VBOUNCE_ATTACHMENT0",
+      "regex": "(?:Attachment.{0,40}was Deleted|the infected attachment)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__VBOUNCE_ATT_QUAR",
+      "regex": "\\bThe attachment was quarantined\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__VBOUNCE_AVREPORT0",
+      "regex": "(antivirus system report|the antivirus module has|illegal attachment|Unrepairable Virus Detected)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__VBOUNCE_CLICKBANK",
+      "regex": "\\bvirus scanner deleted your message\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__VBOUNCE_DUTCH",
+      "regex": "bevatte bijlage besmet welke besmet was met een virus",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__VBOUNCE_EXIM",
+      "regex": "a potentially executable attachment ",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__VBOUNCE_GUIN",
+      "regex": "message contains file attachments that are not permitted",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__VBOUNCE_MAILMARSHAL",
+      "regex": "Mail.?Marshal Rule: Inbound Messages : Block Dangerous Attachments",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__VBOUNCE_MAILSWEEP",
+      "regex": "MAILsweeper has found that a \\S+ \\S+ \\S+ \\S+ one or more virus",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__VBOUNCE_MAILSWEEP2",
+      "regex": "\\bblocked by Mailsweeper\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__VBOUNCE_QUOTED_EXE",
+      "regex": "> TVqQAAMAAAAEAAAA",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__VBOUNCE_REJ_FILT",
+      "regex": "Reason: Rejected by filter",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__VBOUNCE_SECURIQ",
+      "regex": "\\bGROUP securiQ.Wall\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__VBOUNCE_SMTP",
+      "regex": "host \\S+ said: 5\\d\\d\\s+Error: Message content rejected",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__VBOUNCE_STRIP_ATTACH",
+      "regex": "\\bhas stripped one or more attachments from the following message\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__VBOUNCE_VALERT",
+      "regex": "The mail message \\S+ \\S+ you sent to \\S+ contains the virus",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__WEBMAIL_ACCT",
+      "regex": "\\byour web ?mail account",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__WE_PAID",
+      "regex": "\\bwe have (?:already )?(?:paid|sent|remitted|issued) \\$?\\d+(?:,\\d+)* (?:thousand )?(?:dollars )?to our (?:users|subscribers|members|clients|affiliates|partners)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__WIDOW",
+      "regex": "\\b(?:widow(?:e[rd])'?s?|veuve)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__WILL_LEGAL",
+      "regex": "\\b(?:codicil|last\\stestament|probate|executor|intestate|bequest|mandamus)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__WIRE_XFR",
+      "regex": "\\b(?:wire|telegraph(?:ic)?|bank)\\s?transfer",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__WITHOUT_EFFORT",
+      "regex": "\\bwith(?:out(?: a(?:ny)?| the)?| no)(?: great| special| extra)? effort\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__YOUR_BANK",
+      "regex": "\\byour?\\s(?:full\\s)?bank(?:ing)?\\sinformations?\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__YOUR_CONSIGNMENT",
+      "regex": "\\b(?:received?|pa(?:y|id)|sen[dt]|h[oe]ld|delay(?:ed)?|impound(?:ed)?|released?|ship(?:ped)?)\\syour(?:\\s\\w+)?\\sconsignment\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__YOUR_FUND",
+      "regex": "\\b(?:your|ihr)\\s(?:unpaid\\s|win+ing\\s|ap+roved\\s|foreign\\s|overdue\\s|outstanding\\s|contract\\s|inheritance\\s|nicht\\sausbezahlten\\s){0,3}(?:fund|f\\su\\sn\\sd|payment|geld)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__YOUR_PERM",
+      "regex": "\\byour\\spermission\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__YOUR_PROFIT",
+      "regex": "\\byour?\\sprofit",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__YOU_ASSIST",
+      "regex": "\\b(?:your\\sas+istan(?:ce|t)|votre\\s(?:as+istance|aide))\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__YOU_INHERIT",
+      "regex": "\\byour\\s[a-z\\s]{0,30}inherit+ance\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__YOU_WON_01",
+      "regex": "\\byou(?:r|'re|'ve|'ll|\\shave|\\sdid)?\\s(?:e-?mail\\s)?(?:\\w+\\s){0,2}(?:a\\s)?w[io]n+(?:er|ing)?(?!\\xe2\\x80\\x99t)(?![`'\\x92]t)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__YOU_WON_02",
+      "regex": "\\bw[io]n\\s(?:(?:for|by)\\s)?your?\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__YOU_WON_04",
+      "regex": "\\bqu[ei]\\s?(?:vous (?:[\\xc3][\\xaa]|=C3=AA|[\\xea]|e)tes\\s?gagnant|en\\scons(?:e|=E9|[\\xe9]|[\\xc3][\\xa9])quence\\sgagne)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__YOU_WON_05",
+      "regex": "\\bI won(?!\\xe2\\x80\\x99t)(?![`'\\x92]t)\\b",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    },
+    {
+      "name": "__freemail_safe_fwd",
+      "regex": "---\\s?(?:(?:Forwarded|Original) message|Alkuper(?:\\xe4|\\xc3\\xa4)inen viesti)",
+      "flag": "i",
+      "score": 1,
+      "description": ""
+    }
+  ]
+}
